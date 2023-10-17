@@ -1,0 +1,32 @@
+h1,
+form,
+.button-wrapper,
+.current-weather-row {
+  text-align: center;
+}
+
+form {
+  margin: 25px;
+}
+
+button {
+  margin: 10px;
+  margin-top: 25px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.search-bar {
+  width: 300px;
+}
+
+.current-weather-row {
+  margin-top: 45px;
+}

@@ -14,23 +14,25 @@
     <title>Weather App</title>
   </head>
   <body>
+    <div class="button-wrapper">
+      <button>Current Location</button>
+      <button>Change °F to °C</button>
+    </div>
+
     <div class="container">
       <h1>Tuesday, October 17, 2023</h1>
 
       <form>
-        <input type="text" placeholder="Search for a city" />
+        <input type="text" placeholder="Search for a city" class="search-bar" />
         <input type="submit" value="Search" />
       </form>
 
-      <button>Current Location 📍</button>
-      <button>Change °F to °C</button>
-
-      <div class="row">
+      <div class="row current-weather-row">
         <div class="col-6">
           <h2>London, England</h2>
-          <h3>77° F</h3>
+          <span>77° F</span>
           <img src="" alt="Weather Icon" />
-          <span>Description: Clear Sky</span>
+          <h4>Clear Sky</h4>
         </div>
 
         <div class="col-6">
