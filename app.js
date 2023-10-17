@@ -60,8 +60,6 @@ form.addEventListener("submit", retrieveUserInput);
 
 //Display Current Weather Information
 function displayUserInput(response) {
-  console.log(response.data);
-
   let h2 = document.querySelector("h2");
   h2.innerHTML = response.data.city;
 

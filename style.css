@@ -24,13 +24,21 @@ body {
   font-family: "Quattrocento Sans", sans-serif;
 }
 
+h2 {
+  margin: 0;
+}
+
 form {
   margin: 25px;
 }
 
 h4 {
-  margin-top: 10px;
   text-transform: capitalize;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
 }
 
 button {
@@ -46,7 +54,7 @@ button {
 ul {
   list-style-type: none;
   padding: 0;
-  margin-top: 15px;
+  margin-top: 26px;
 }
 
 .container {
@@ -83,5 +91,5 @@ ul {
 
 .current-temperature {
   color: #1e7aa0;
-  font-size: 28px;
+  font-size: 33px;
 }
