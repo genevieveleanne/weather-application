@@ -65,6 +65,12 @@ function displayUserInput(response) {
   let h2 = document.querySelector("h2");
   h2.innerHTML = response.data.city;
 
+  let weatherIcon = document.querySelector("#weather-icon");
+  weatherIcon.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
+
   let description = response.data.condition.description;
   let h4 = document.querySelector("h4");
   h4.innerHTML = `${description}`;
