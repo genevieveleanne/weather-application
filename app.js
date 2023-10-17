@@ -85,3 +85,19 @@ function displayUserInput(response) {
   let windListItem = document.querySelector("#wind-speed");
   windListItem.innerHTML = `${windSpeed}`;
 }
+
+// When User Clicks on Current Location Button
+function retrievePosition() {
+  navigator.geolocation.getCurrentPosition(showLocation);
+}
+
+function showLocation(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+
+  let currentLocation = `${apiBase}/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=imperial`;
+  axios.get(currentLocation).then(displayUserInput);
+}
+
+let locationButton = document.querySelector("#current-location");
+locationButton.addEventListener("click", retrievePosition);
