@@ -39,3 +39,49 @@ let currentDate = new Date();
 
 let dateDisplay = document.querySelector("#current-date");
 dateDisplay.innerHTML = formatDate(currentDate);
+
+//API key and basepoint
+let apiKey = "1bac80fa0c32ft537387a483f19bf3fo";
+let apiBase = "https://api.shecodes.io/weather/v1/";
+
+//User Submits Form
+function retrieveUserInput(event) {
+  event.preventDefault();
+
+  let userCity = document.querySelector("#user-city");
+
+  let currentWeather = `${apiBase}/current?query=${userCity.value}&key=${apiKey}&units=imperial`;
+
+  axios.get(currentWeather).then(displayUserInput);
+}
+
+let form = document.querySelector("form");
+form.addEventListener("submit", retrieveUserInput);
+
+//Display Current Weather Information
+function displayUserInput(response) {
+  console.log(response.data);
+
+  let h2 = document.querySelector("h2");
+  h2.innerHTML = response.data.city;
+
+  let description = response.data.condition.description;
+  let h4 = document.querySelector("h4");
+  h4.innerHTML = `${description}`;
+
+  let currentTemperature = Math.round(response.data.temperature.current);
+  let tempElement = document.querySelector("#current-temp");
+  tempElement.innerHTML = `${currentTemperature}°`;
+
+  let feelsTemp = Math.round(response.data.temperature.feels_like);
+  let feelsTempElement = document.querySelector("#feels-like");
+  feelsTempElement.innerHTML = `${feelsTemp}`;
+
+  let humidity = response.data.temperature.humidity;
+  let humidityListItem = document.querySelector("#humidity");
+  humidityListItem.innerHTML = `${humidity}`;
+
+  let windSpeed = Math.round(response.data.wind.speed);
+  let windListItem = document.querySelector("#wind-speed");
+  windListItem.innerHTML = `${windSpeed}`;
+}

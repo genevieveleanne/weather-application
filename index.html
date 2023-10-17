@@ -32,23 +32,40 @@
       <h1 id="current-date">Tuesday, October 17, 2023</h1>
 
       <form>
-        <input type="text" placeholder="Search for a city" class="search-bar" />
+        <input
+          type="text"
+          placeholder="Search for a city"
+          id="user-city"
+          class="search-bar"
+          autocomplete="off"
+        />
         <input type="submit" value="Search" class="submit-button" />
       </form>
 
       <div class="row current-weather-row">
         <div class="col-6">
-          <h2>London, England</h2>
-          <span class="current-temperature">77° F</span>
+          <h2>London</h2>
+          <span class="current-temperature">
+            <span id="current-temp">77°</span>
+            F</span
+          >
           <img src="" alt="Weather Icon" />
           <h4>Clear Sky</h4>
         </div>
 
         <div class="col-6">
           <ul>
-            <li>Feels like: 75°</li>
-            <li>Humidity: 0%</li>
-            <li>Wind Speed: 3 mph</li>
+            <li>Feels like: <span id="feels-like">75</span>°</li>
+            <li>
+              Humidity:
+              <span id="humidity">0</span>
+              %
+            </li>
+            <li>
+              Wind Speed:
+              <span id="wind-speed">3</span>
+              mph
+            </li>
           </ul>
         </div>
       </div>
