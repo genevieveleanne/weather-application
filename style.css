@@ -5,23 +5,47 @@ form,
   text-align: center;
 }
 
+h1,
+h2,
+h4,
+li,
+button {
+  color: #4a466b;
+}
+
+.search-bar,
+.submit-button {
+  padding: 3px 5px;
+}
+
 body {
   background-image: url(images/city-rain-background.jpg);
   background-size: cover;
+  font-family: "Quattrocento Sans", sans-serif;
 }
 
 form {
   margin: 25px;
 }
 
+h4 {
+  margin-top: 10px;
+}
+
 button {
   margin: 10px;
   margin-top: 25px;
+  background: lavenderblush;
+  border: 2px solid #4a466b;
+  padding: 10px 12px;
+  font-size: 18px;
+  border-radius: 30px;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
+  margin-top: 15px;
 }
 
 .container {
@@ -34,8 +58,29 @@ ul {
 
 .search-bar {
   width: 300px;
+  border: 2px solid #4a466b;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #4a466b;
+  color: whitesmoke;
+  border-radius: 4px;
+  font-size: 17px;
+  transition: all 150ms ease-in-out;
+  border: 1px solid #4a466b;
+}
+
+.submit-button:hover {
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 .current-weather-row {
   margin-top: 45px;
+}
+
+.current-temperature {
+  color: #1e7aa0;
+  font-size: 28px;
 }

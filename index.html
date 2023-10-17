@@ -10,6 +10,13 @@
       crossorigin="anonymous"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <title>Weather App</title>
   </head>
@@ -24,13 +31,13 @@
 
       <form>
         <input type="text" placeholder="Search for a city" class="search-bar" />
-        <input type="submit" value="Search" />
+        <input type="submit" value="Search" class="submit-button" />
       </form>
 
       <div class="row current-weather-row">
         <div class="col-6">
           <h2>London, England</h2>
-          <span>77° F</span>
+          <span class="current-temperature">77° F</span>
           <img src="" alt="Weather Icon" />
           <h4>Clear Sky</h4>
         </div>
