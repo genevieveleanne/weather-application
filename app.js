@@ -90,7 +90,7 @@ function displayUserInput(response) {
   windListItem.innerHTML = `${windSpeed}`;
 }
 
-// When User Clicks on Current Location Button
+//User Clicks on Current Location Button
 function retrievePosition() {
   navigator.geolocation.getCurrentPosition(showLocation);
 }
@@ -105,3 +105,5 @@ function showLocation(position) {
 
 let locationButton = document.querySelector("#current-location");
 locationButton.addEventListener("click", retrievePosition);
+
+//User Clicks on Change °F to °C button

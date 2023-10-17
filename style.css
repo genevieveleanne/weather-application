@@ -18,6 +18,11 @@ button {
   padding: 3px 5px;
 }
 
+li,
+button {
+  font-size: 18px;
+}
+
 body {
   background-image: url(images/city-rain-background.jpg);
   background-size: cover;
@@ -37,7 +42,6 @@ h4 {
 }
 
 li {
-  font-size: 18px;
   margin: 5px;
 }
 
@@ -47,7 +51,6 @@ button {
   background: lavenderblush;
   border: 2px solid #4a466b;
   padding: 10px 12px;
-  font-size: 18px;
   border-radius: 30px;
 }
 
@@ -60,7 +63,7 @@ ul {
 .container {
   margin-top: 50px;
   background: lavenderblush;
-  max-width: 1125px;
+  max-width: 1000px;
   border-radius: 10px;
   padding: 10px;
 }
