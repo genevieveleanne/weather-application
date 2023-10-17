@@ -5,6 +5,11 @@ form,
   text-align: center;
 }
 
+body {
+  background-image: url(images/city-rain-background.jpg);
+  background-size: cover;
+}
+
 form {
   margin: 25px;
 }
@@ -21,6 +26,10 @@ ul {
 
 .container {
   margin-top: 50px;
+  background: lavenderblush;
+  max-width: 1125px;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .search-bar {
