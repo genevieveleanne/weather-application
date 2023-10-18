@@ -44,15 +44,21 @@ dateDisplay.innerHTML = formatDate(currentDate);
 let apiKey = "1bac80fa0c32ft537387a483f19bf3fo";
 let apiBase = "https://api.shecodes.io/weather/v1/";
 
+// Display Current Weather for London on load
+function searchCity(city) {
+  let currentWeather = `${apiBase}/current?query=${city}&key=${apiKey}&units=imperial`;
+  axios.get(currentWeather).then(displayUserInput);
+}
+
+searchCity("London");
+
 //User Submits Form
 function retrieveUserInput(event) {
   event.preventDefault();
 
   let userCity = document.querySelector("#user-city");
 
-  let currentWeather = `${apiBase}/current?query=${userCity.value}&key=${apiKey}&units=imperial`;
-
-  axios.get(currentWeather).then(displayUserInput);
+  searchCity(userCity.value);
 }
 
 let form = document.querySelector("form");
