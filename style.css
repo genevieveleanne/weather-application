@@ -24,8 +24,7 @@ button {
 }
 
 body {
-  background-image: url(images/city-rain-background.jpg);
-  background-size: cover;
+  background-color: lavender;
   font-family: "Quattrocento Sans", sans-serif;
 }
 
