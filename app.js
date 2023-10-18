@@ -66,6 +66,9 @@ form.addEventListener("submit", retrieveUserInput);
 
 //Display Current Weather Information
 function displayUserInput(response) {
+  feelsLikeTemperature = response.data.temperature.feels_like;
+  fahrenheitTemperature = response.data.temperature.current;
+
   let h2 = document.querySelector("h2");
   h2.innerHTML = response.data.city;
 
@@ -78,9 +81,6 @@ function displayUserInput(response) {
   let description = response.data.condition.description;
   let h4 = document.querySelector("h4");
   h4.innerHTML = `${description}`;
-
-  fahrenheitTemperature = response.data.temperature.current;
-  feelsLikeTemperature = response.data.temperature.feels_like;
 
   let currentTemperature = Math.round(response.data.temperature.current);
   let tempElement = document.querySelector("#current-temp");
