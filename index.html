@@ -25,11 +25,12 @@
   <body>
     <div class="button-wrapper">
       <button id="current-location">Current Location</button>
-      <button>Change °F to °C</button>
+      <button id="celsius-button">Change °F to °C</button>
+      <button id="fahrenheit-button">Change °C to °F</button>
     </div>
 
     <div class="container">
-      <h1 id="current-date">Tuesday, October 17, 2023</h1>
+      <h1 id="current-date">Day, Month Date, Year</h1>
 
       <form>
         <input
@@ -44,25 +45,24 @@
 
       <div class="row current-weather-row">
         <div class="col-6">
-          <h2>London</h2>
+          <h2>City</h2>
           <span class="current-temperature">
-            <span id="current-temp">77°</span>
-            F</span
-          >
+            <span id="current-temp">0°</span>
+          </span>
           <img src="" alt="Weather Icon" id="weather-icon" />
-          <h4>Clear Sky</h4>
+          <h4>Description</h4>
         </div>
 
         <div class="col-6">
           <ul>
-            <li>Feels like: <span id="feels-like">75</span>°</li>
+            <li>Feels like: <span id="feels-like">0</span>°</li>
             <li>
               Humidity:
               <span id="humidity">0</span>%
             </li>
             <li>
               Wind Speed:
-              <span id="wind-speed">3</span>
+              <span id="wind-speed">0</span>
               mph
             </li>
           </ul>
