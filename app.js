@@ -48,6 +48,9 @@ let apiBase = "https://api.shecodes.io/weather/v1/";
 function searchCity(city) {
   let currentWeather = `${apiBase}/current?query=${city}&key=${apiKey}&units=imperial`;
   axios.get(currentWeather).then(displayUserInput);
+
+  let forecast = `${apiBase}/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  axios.get(forecast).then(displayFiveForecast);
 }
 
 searchCity("Atlanta");
@@ -110,6 +113,9 @@ function showLocation(position) {
 
   let currentLocation = `${apiBase}/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=imperial`;
   axios.get(currentLocation).then(displayUserInput);
+
+  let forecast = `${apiBase}/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=imperial`;
+  axios.get(forecast).then(displayFiveForecast);
 }
 
 let locationButton = document.querySelector("#current-location");
@@ -180,3 +186,8 @@ function displayForecast() {
 }
 
 displayForecast();
+
+//Console Log Forecast
+function displayFiveForecast(response) {
+  console.log(response.data);
+}
