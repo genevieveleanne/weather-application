@@ -153,3 +153,30 @@ let fahrenheitButton = document.querySelector("#fahrenheit-button");
 fahrenheitButton.addEventListener("click", displayFahrenheitTemp);
 
 //5-Day Forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast-row");
+
+  let forecastHTML = `<div class="row forecast-row">`;
+
+  function showForecast(day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+    <h5>${day}</h5>
+    <span class="forecast-description">Clear Sky</span>
+    <img src="" alt="Weather Icon" />
+    <ul class="forecast-list">
+      <li class="forecast-temperature">High: 80°</li>
+      <li class="forecast-temperature">Low: 75°</li>
+    </ul>
+    </div>`;
+  }
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(showForecast);
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
