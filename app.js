@@ -192,18 +192,15 @@ function displayForecast(response) {
     <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
       forecastDay.condition.icon
     }.png" alt="Weather Icon" class="forecast-icon"/>
-    <span class="forecast-description">${
-      forecastDay.condition.description
-    }</span>
       </div>
     
     <ul class="forecast-list">
-      <li class="forecast-temperature">High: ${
+      <li class="forecast-temperature">High: ${Math.round(
         forecastDay.temperature.maximum
-      }°</li>
-      <li class="forecast-temperature">Low: ${
+      )}°</li>
+      <li class="forecast-temperature">Low: ${Math.round(
         forecastDay.temperature.minimum
-      }°</li>
+      )}°</li>
     </ul>
     </div>`;
     }
