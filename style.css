@@ -82,7 +82,7 @@ ul {
 .container {
   margin-top: 15px;
   background: lavenderblush;
-  max-width: 1050px;
+  max-width: 1100px;
   border-radius: 10px;
   padding: 10px;
 }
@@ -120,10 +120,23 @@ ul {
   margin-top: 35px;
 }
 
-.forecast-temperature {
-  color: #1e7aa0;
+.forecast-description {
+  text-transform: capitalize;
+}
+
+.forecast-container {
+  max-width: 83px;
+  margin: 0 auto;
+}
+
+.forecast-icon {
+  width: 55px;
 }
 
 .forecast-list {
-  margin: 10px;
+  margin: 20px;
+}
+
+.forecast-temperature {
+  color: #1e7aa0;
 }

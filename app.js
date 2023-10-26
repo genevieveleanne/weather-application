@@ -169,8 +169,12 @@ function displayForecast(response) {
       forecastHTML +
       `<div class="col">
     <h5>${forecastDay.time}</h5>
+
+    <div class="forecast-container">
+    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" alt="Weather Icon" class="forecast-icon"/>
     <span class="forecast-description">${forecastDay.condition.description}</span>
-    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" alt="Weather Icon"/>
+      </div>
+    
     <ul class="forecast-list">
       <li class="forecast-temperature">High: ${forecastDay.temperature.maximum}°</li>
       <li class="forecast-temperature">Low: ${forecastDay.temperature.minimum}°</li>
