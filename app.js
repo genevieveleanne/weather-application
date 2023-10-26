@@ -69,7 +69,6 @@ form.addEventListener("submit", retrieveUserInput);
 
 //Display Current Weather Information
 function displayUserInput(response) {
-  feelsLikeTemperature = response.data.temperature.feels_like;
   fahrenheitTemperature = response.data.temperature.current;
 
   let h2 = document.querySelector("h2");
@@ -126,33 +125,24 @@ function displayCelsiusTemp(event) {
   event.preventDefault();
 
   let celsiusTemperature = Math.round((5 / 9) * (fahrenheitTemperature - 32));
-  let feelsLikeCelsius = Math.round((5 / 9) * (feelsLikeTemperature - 32));
 
   let currentTemperature = document.querySelector("#current-temp");
   currentTemperature.innerHTML = `${celsiusTemperature}°C`;
-
-  let feelsTempElement = document.querySelector("#feels-like");
-  feelsTempElement.innerHTML = `${feelsLikeCelsius}`;
 }
 
 let celsiusButton = document.querySelector("#celsius-button");
 celsiusButton.addEventListener("click", displayCelsiusTemp);
 
 let fahrenheitTemperature = null;
-let feelsLikeTemperature = null;
 
 //User Clicks on Change °C to °F button
 function displayFahrenheitTemp(event) {
   event.preventDefault();
 
   let fahrenheitTemp = Math.round(fahrenheitTemperature);
-  let feelsLikeTemp = Math.round(feelsLikeTemperature);
 
   let currentTemperature = document.querySelector("#current-temp");
   currentTemperature.innerHTML = `${fahrenheitTemp}°F`;
-
-  let feelsTempElement = document.querySelector("#feels-like");
-  feelsTempElement.innerHTML = `${feelsLikeTemp}`;
 }
 
 let fahrenheitButton = document.querySelector("#fahrenheit-button");
