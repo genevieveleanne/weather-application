@@ -158,7 +158,17 @@ function displayFahrenheitTemp(event) {
 let fahrenheitButton = document.querySelector("#fahrenheit-button");
 fahrenheitButton.addEventListener("click", displayFahrenheitTemp);
 
-//5-Day Forecast
+//Format Day for Forecast
+function formatForecastDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+//Weekly Forecast
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast-row");
 
@@ -168,16 +178,24 @@ function displayForecast(response) {
     forecastHTML =
       forecastHTML +
       `<div class="col">
-    <h5>${forecastDay.time}</h5>
+    <h5>${formatForecastDay(forecastDay.time)}</h5>
 
     <div class="forecast-container">
-    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" alt="Weather Icon" class="forecast-icon"/>
-    <span class="forecast-description">${forecastDay.condition.description}</span>
+    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+      forecastDay.condition.icon
+    }.png" alt="Weather Icon" class="forecast-icon"/>
+    <span class="forecast-description">${
+      forecastDay.condition.description
+    }</span>
       </div>
     
     <ul class="forecast-list">
-      <li class="forecast-temperature">High: ${forecastDay.temperature.maximum}°</li>
-      <li class="forecast-temperature">Low: ${forecastDay.temperature.minimum}°</li>
+      <li class="forecast-temperature">High: ${
+        forecastDay.temperature.maximum
+      }°</li>
+      <li class="forecast-temperature">Low: ${
+        forecastDay.temperature.minimum
+      }°</li>
     </ul>
     </div>`;
   }
