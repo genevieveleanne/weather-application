@@ -7,13 +7,13 @@ form,
 
 h1,
 h2,
-h3,
 h4,
 h5,
 li,
 button,
-.forecast-description {
-  color: #4a466b;
+footer,
+a {
+  color: #fff;
 }
 
 .search-bar,
@@ -27,7 +27,7 @@ button {
 }
 
 body {
-  background-color: lavender;
+  background-color: #78b7f5;
   font-family: "Quattrocento Sans", sans-serif;
 }
 
@@ -51,6 +51,7 @@ h3 {
   text-align: center;
   margin-top: 45px;
   font-weight: bold;
+  color: #4a466b;
 }
 
 h5 {
@@ -61,8 +62,8 @@ h5 {
 button {
   margin: 10px;
   margin-top: 2px;
-  background: lavenderblush;
-  border: 2px solid #4a466b;
+  background: #13ae54;
+  border: 2px solid #13ae54;
   padding: 10px 12px;
   border-radius: 30px;
   transition: all 150ms ease-in-out;
@@ -71,6 +72,7 @@ button {
 button:hover {
   background: #4a466b;
   color: lavenderblush;
+  border: none;
   cursor: pointer;
 }
 
@@ -87,7 +89,7 @@ footer {
 
 .container {
   margin-top: 5px;
-  background: lavenderblush;
+  background: #13ae54;
   max-width: 1100px;
   border-radius: 10px;
   padding: 10px;
@@ -118,7 +120,7 @@ footer {
 }
 
 .current-temperature {
-  color: #1e7aa0;
+  color: #4a466b;
   font-size: 33px;
 }
 
@@ -141,5 +143,5 @@ footer {
 }
 
 .forecast-temperature {
-  color: #1e7aa0;
+  color: #4a466b;
 }
