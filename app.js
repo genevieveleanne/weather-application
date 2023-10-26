@@ -163,23 +163,31 @@ function formatForecastDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
 
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
   return days[day];
 }
 
-//Weekly Forecast
+//5-Day Forecast
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast-row");
 
   let forecastHTML = `<div class="row forecast-row">`;
 
-  function showForecast(forecastDay) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col">
+  function showForecast(forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col">
     <h5>${formatForecastDay(forecastDay.time)}</h5>
-
     <div class="forecast-container">
     <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
       forecastDay.condition.icon
@@ -198,6 +206,7 @@ function displayForecast(response) {
       }°</li>
     </ul>
     </div>`;
+    }
   }
 
   let forecast = response.data.daily;
