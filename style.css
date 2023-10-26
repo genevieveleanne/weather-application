@@ -55,6 +55,7 @@ h3 {
 
 h5 {
   font-weight: bold;
+  text-align: center;
 }
 
 button {
@@ -126,11 +127,12 @@ ul {
 
 .forecast-container {
   max-width: 83px;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .forecast-icon {
   width: 55px;
+  margin: 0 auto;
 }
 
 .forecast-list {
