@@ -13,7 +13,7 @@ li,
 button,
 footer,
 a {
-  color: #fff;
+  color: #4a466b;
 }
 
 .search-bar,
@@ -27,7 +27,7 @@ button {
 }
 
 body {
-  background-color: #78b7f5;
+  background-color: lavender;
   font-family: "Quattrocento Sans", sans-serif;
 }
 
@@ -62,8 +62,8 @@ h5 {
 button {
   margin: 10px;
   margin-top: 2px;
-  background: #13ae54;
-  border: 2px solid #13ae54;
+  background: lavenderblush;
+  border: 2px solid #4a466b;
   padding: 10px 12px;
   border-radius: 30px;
   transition: all 150ms ease-in-out;
@@ -89,7 +89,7 @@ footer {
 
 .container {
   margin-top: 5px;
-  background: #13ae54;
+  background: lavenderblush;
   max-width: 1100px;
   border-radius: 10px;
   padding: 10px;
