@@ -69,8 +69,6 @@ form.addEventListener("submit", retrieveUserInput);
 
 //Display Current Weather Information
 function displayUserInput(response) {
-  fahrenheitTemperature = response.data.temperature.current;
-
   let h2 = document.querySelector("h2");
   h2.innerHTML = response.data.city;
 
@@ -119,34 +117,6 @@ function showLocation(position) {
 
 let locationButton = document.querySelector("#current-location");
 locationButton.addEventListener("click", retrievePosition);
-
-//User Clicks on Change °F to °C button
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-
-  let celsiusTemperature = Math.round((5 / 9) * (fahrenheitTemperature - 32));
-
-  let currentTemperature = document.querySelector("#current-temp");
-  currentTemperature.innerHTML = `${celsiusTemperature}°C`;
-}
-
-let celsiusButton = document.querySelector("#celsius-button");
-celsiusButton.addEventListener("click", displayCelsiusTemp);
-
-let fahrenheitTemperature = null;
-
-//User Clicks on Change °C to °F button
-function displayFahrenheitTemp(event) {
-  event.preventDefault();
-
-  let fahrenheitTemp = Math.round(fahrenheitTemperature);
-
-  let currentTemperature = document.querySelector("#current-temp");
-  currentTemperature.innerHTML = `${fahrenheitTemp}°F`;
-}
-
-let fahrenheitButton = document.querySelector("#fahrenheit-button");
-fahrenheitButton.addEventListener("click", displayFahrenheitTemp);
 
 //Format Day for Forecast
 function formatForecastDay(timestamp) {
