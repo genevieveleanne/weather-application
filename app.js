@@ -112,7 +112,7 @@ function showLocation(position) {
   axios.get(currentLocation).then(displayUserInput);
 
   let forecast = `${apiBase}/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=imperial`;
-  axios.get(forecast).then(displayFiveForecast);
+  axios.get(forecast).then(displayForecast);
 }
 
 let locationButton = document.querySelector("#current-location");
@@ -132,7 +132,6 @@ function formatForecastDay(timestamp) {
     "Friday",
     "Saturday",
   ];
-
   return days[day];
 }
 
