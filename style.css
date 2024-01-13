@@ -145,7 +145,11 @@ footer {
   color: #4a466b;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1110px) {
+  footer {
+    margin-top: 41px;
+  }
+
   .container {
     background-color: lavender;
   }
@@ -158,6 +162,10 @@ footer {
 
   h3 {
     margin-top: 73px;
+  }
+
+  footer {
+    margin-top: 0px;
   }
 
   .current-location-button {
