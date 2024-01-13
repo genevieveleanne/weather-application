@@ -154,10 +154,10 @@ function displayForecast(response) {
       </div>
     
     <ul class="forecast-list">
-      <li class="forecast-temperature">High: ${Math.round(
+      <li class="forecast-temperature d-none d-md-inline">High: ${Math.round(
         forecastDay.temperature.maximum
       )}°</li>
-      <li class="forecast-temperature">Low: ${Math.round(
+      <li class="forecast-temperature d-none d-md-inline">Low: ${Math.round(
         forecastDay.temperature.minimum
       )}°</li>
     </ul>

@@ -144,3 +144,36 @@ footer {
 .forecast-temperature {
   color: #4a466b;
 }
+
+@media (max-width: 768px) {
+  .container {
+    background-color: lavender;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    margin-top: 25px;
+  }
+
+  h3 {
+    margin-top: 73px;
+  }
+
+  .current-location-button {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .search-bar {
+    width: 235px;
+  }
+
+  .current-weather-row {
+    margin-top: 45px;
+  }
+
+  .forecast-list {
+    margin-top: 28px;
+  }
+}
