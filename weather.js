@@ -1,7 +1,5 @@
-//Step 1: Get current date
-//Step 2: Create search engine
 //Step 3: Integrate API
-//Step 4: Get user's city, current temp, description, wind speed, and humidity
+//Step 4: Display user's city, current temp, description, wind speed, and humidity
 
 //GET CURRENT DATE
 function formatDate(today) {
@@ -43,3 +41,16 @@ let today = new Date();
 
 let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = formatDate(today);
+
+//CREATE SEARCH ENGINE
+function getUserCity(event) {
+  event.preventDefault();
+
+  let userCity = document.querySelector("#city-search");
+  let h1 = document.querySelector("h1");
+
+  h1.innerHTML = `${userCity.value}`;
+}
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", getUserCity);
