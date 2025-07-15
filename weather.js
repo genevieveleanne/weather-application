@@ -1,5 +1,3 @@
-//Step 4: Display user's city, current temp, description, wind speed, and humidity
-
 //GET CURRENT DATE
 function formatDate(today) {
   let days = [
@@ -51,6 +49,8 @@ function searchUserCity(userCity) {
   axios.get(currentWeather).then(displayCurrentWeather);
 }
 
+searchUserCity("Atlanta");
+
 //USER SUBMITS FORM
 function getUserCity(event) {
   event.preventDefault();
@@ -65,5 +65,23 @@ searchForm.addEventListener("submit", getUserCity);
 
 //DISPLAY CURRENT WEATHER
 function displayCurrentWeather(response) {
-  console.log(response);
+  let city = document.querySelector("h1");
+  city.innerHTML = response.data.city;
+
+  let currentTemp = document.querySelector("#current-temp");
+  let roundedTemp = Math.round(response.data.temperature.current);
+  currentTemp.innerHTML = roundedTemp;
+
+  let weatherDescription = document.querySelector("#weather-description");
+  weatherDescription.innerHTML = response.data.condition.description;
+
+  let windSpeed = document.querySelector("#wind-speed");
+  let roundedWindSpeed = Math.round(response.data.wind.speed);
+  windSpeed.innerHTML = `Wind speed: ${roundedWindSpeed} mph`;
+
+  let humidity = document.querySelector("#humidity");
+  let apiHumidity = response.data.temperature.humidity;
+  humidity.innerHTML = `Humidity: ${apiHumidity}%`;
+
+  console.log(response.data);
 }
