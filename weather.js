@@ -1,30 +1,22 @@
 //GET CURRENT DATE
 function formatDate(today) {
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   let day = days[today.getDay()];
 
   let months = [
-    "January",
-    "February",
-    "March",
+    "Jan",
+    "Feb",
+    "Mar",
     "April",
     "May",
     "June",
     "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
 
   let month = months[today.getMonth()];
