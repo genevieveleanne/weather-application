@@ -28,9 +28,6 @@ footer {
   margin-top: 35px;
 }
 
-.weather-icon {
-}
-
 .weather-items {
   display: flex;
   justify-content: space-evenly;

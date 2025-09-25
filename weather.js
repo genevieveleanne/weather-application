@@ -39,6 +39,9 @@ let apiBase = "https://api.shecodes.io/weather/v1/";
 function searchUserCity(userCity) {
   let currentWeather = `${apiBase}current?query=${userCity}&key=${apiKey}&units=imperial`;
   axios.get(currentWeather).then(displayCurrentWeather);
+
+  let forecast = `${apiBase}forecast?query=${userCity}&key=${apiKey}&units=imperial`;
+  axios.get(forecast).then(displayForecast);
 }
 
 searchUserCity("Atlanta");
@@ -78,5 +81,10 @@ function displayCurrentWeather(response) {
   let apiHumidity = response.data.temperature.humidity;
   humidity.innerHTML = `Humidity: ${apiHumidity}%`;
 
+  console.log(response.data);
+}
+
+//DISPLAY FORECAST
+function displayForecast(response) {
   console.log(response.data);
 }
