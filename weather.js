@@ -86,5 +86,13 @@ function displayCurrentWeather(response) {
 
 //DISPLAY FORECAST
 function displayForecast(response) {
+  let forecastDisplay = document.querySelector("#forecast-display");
+  forecastDisplay.innerHTML = `
+          <ul>
+            <li>Monday</li>
+            <li>☀️</li>
+            <li>50° | 48°</li>
+          </ul>`;
+
   console.log(response.data);
 }
