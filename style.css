@@ -33,7 +33,7 @@ footer {
   justify-content: space-evenly;
 }
 
-.forecast {
+.forecast-items {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
