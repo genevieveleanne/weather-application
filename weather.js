@@ -80,19 +80,32 @@ function displayCurrentWeather(response) {
   let humidity = document.querySelector("#humidity");
   let apiHumidity = response.data.temperature.humidity;
   humidity.innerHTML = `Humidity: ${apiHumidity}%`;
-
-  console.log(response.data);
 }
 
 //DISPLAY FORECAST
 function displayForecast(response) {
+  console.log(response.data.daily);
+}
+
+//FORECAST - DUMMY DATA
+function forecast() {
   let forecastDisplay = document.querySelector("#forecast-display");
-  forecastDisplay.innerHTML = `
+
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
           <ul>
-            <li>Monday</li>
+            <li>${day}</li>
             <li>☀️</li>
             <li>50° | 48°</li>
           </ul>`;
+  });
 
-  console.log(response.data);
+  forecastDisplay.innerHTML = forecastHtml;
 }
+
+forecast();
