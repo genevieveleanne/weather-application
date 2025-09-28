@@ -32,3 +32,8 @@ footer {
   display: flex;
   justify-content: space-evenly;
 }
+
+.forecast-display {
+  display: flex;
+  justify-content: space-evenly;
+}
