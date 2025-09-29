@@ -84,7 +84,11 @@ function displayCurrentWeather(response) {
 
 //FORMAT FORECAST TIMESTAMP
 function formatTimestamp(timestamp) {
-  let currentDate = new Date();
+  let currentDate = new Date(timestamp * 1000);
+
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[currentDate.getDay()];
 }
 
 //DISPLAY FORECAST
@@ -98,16 +102,16 @@ function displayForecast(response) {
       forecastHtml =
         forecastHtml +
         `<ul>
-        <li>Tue</li>
+        <li>${formatTimestamp(day.time)}</li>
           <li>
             <img src="${day.condition.icon_url}" />
             </li>
-          <li>${day.temperature.maximum}° | ${day.temperature.minimum}°</li>
+          <li>${Math.round(day.temperature.maximum)}° | ${Math.round(
+          day.temperature.minimum
+        )}°</li>
         </ul>`;
     }
   });
 
   forecastDisplay.innerHTML = forecastHtml;
-
-  console.log(response.data.daily);
 }
