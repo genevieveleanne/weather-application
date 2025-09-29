@@ -82,30 +82,32 @@ function displayCurrentWeather(response) {
   humidity.innerHTML = `Humidity: ${apiHumidity}%`;
 }
 
-//DISPLAY FORECAST
-function displayForecast(response) {
-  console.log(response.data.daily);
+//FORMAT FORECAST TIMESTAMP
+function formatTimestamp(timestamp) {
+  let currentDate = new Date();
 }
 
-//FORECAST - DUMMY DATA
-function forecast() {
+//DISPLAY FORECAST
+function displayForecast(response) {
   let forecastDisplay = document.querySelector("#forecast-display");
 
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
-          <ul>
-            <li>${day}</li>
-            <li>☀️</li>
-            <li>50° | 48°</li>
-          </ul>`;
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `<ul>
+        <li>Tue</li>
+          <li>
+            <img src="${day.condition.icon_url}" />
+            </li>
+          <li>${day.temperature.maximum}° | ${day.temperature.minimum}°</li>
+        </ul>`;
+    }
   });
 
   forecastDisplay.innerHTML = forecastHtml;
-}
 
-forecast();
+  console.log(response.data.daily);
+}
