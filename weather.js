@@ -64,7 +64,7 @@ function displayCurrentWeather(response) {
   city.innerHTML = response.data.city;
 
   let weatherIcon = document.querySelector("#weather-icon");
-  weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
+  weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
 
   let currentTemp = document.querySelector("#current-temp");
   let roundedTemp = Math.round(response.data.temperature.current);
