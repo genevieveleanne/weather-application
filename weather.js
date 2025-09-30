@@ -104,7 +104,9 @@ function displayForecast(response) {
         `<ul>
         <li>${formatTimestamp(day.time)}</li>
           <li>
-            <img src="${day.condition.icon_url}" />
+            <img src="${
+              day.condition.icon_url
+            }" class="forecast-weather-icon" />
             </li>
           <li>${Math.round(day.temperature.maximum)}° | ${Math.round(
           day.temperature.minimum
